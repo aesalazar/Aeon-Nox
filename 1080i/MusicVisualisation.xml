@@ -104,23 +104,9 @@
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<include>VisibleFadeAnimation</include>
 			<include>WindowOpenCloseAnimation</include>
-			<control type="image">
-				<top>-150</top>
-				<width>100%</width>
-				<height>700</height>
-				<texture border="1">nowplaying_shadow.png</texture>
-			</control>
-			<control type="image">
-				<left>860</left>
-				<top>102</top>
-				<width>400</width>
-				<height>45</height>
-				<colordiffuse>FFFFD700</colordiffuse>
-				<aspectratio>keep</aspectratio>
-				<texture fallback="rating0.png">$INFO[MusicPlayer.UserRating,flags/rating/,.png]</texture>
-			</control>
 			<control type="grouplist">
-				<top>40</top>
+				<top>140</top>
+				<left>705</left>
 				<width>1180</width>
 				<height>460</height>
 				<itemgap>30</itemgap>
@@ -130,15 +116,10 @@
 					<width>1180</width>
 					<height>40</height>
 					<font>font48_title</font>
-					<textoffsetx>15</textoffsetx>
 					<align>right</align>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[MusicPlayer.TrackNumber,[COLOR labelheader],. [/COLOR]]$INFO[Player.Title]</label>
-				</control>
-				<control type="label">
-					<height>22</height>
-					<label />
 				</control>
 				<control type="label">
 					<left>1140</left>
@@ -146,7 +127,6 @@
 					<height>40</height>
 					<font>font16</font>
 					<align>right</align>
-					<textoffsetx>15</textoffsetx>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
@@ -156,7 +136,6 @@
 					<width>1180</width>
 					<height>40</height>
 					<font>font16</font>
-					<textoffsetx>15</textoffsetx>
 					<align>right</align>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -167,7 +146,6 @@
 					<width>1180</width>
 					<height>40</height>
 					<font>font16</font>
-					<textoffsetx>15</textoffsetx>
 					<align>right</align>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -203,7 +181,7 @@
 						<description>Codec Label</description>
 						<width>auto</width>
 						<label>$INFO[MusicPlayer.BitRate, | , kbps]</label>
-						<font>font13</font>
+						<font>font20</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -212,7 +190,7 @@
 						<description>Codec Label</description>
 						<width>auto</width>
 						<label>$INFO[MusicPlayer.BitsPerSample, | , bps]</label>
-						<font>font13</font>
+						<font>font20</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -221,37 +199,14 @@
 						<description>Codec Label</description>
 						<width>auto</width>
 						<label>$INFO[MusicPlayer.SampleRate, | , KHz]</label>
-						<font>font13</font>
+						<font>font20</font>
 						<aligny>top</aligny>
 						<textcolor>grey</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
 			</control>
-			<control type="group">
-				<left>1180</left>
-				<control type="image">
-					<left>200</left>
-					<width>500</width>
-					<height>500</height>
-					<aligny>top</aligny>
-					<aspectratio align="left">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
-					<texture background="true" fallback="special://skin/extras/cdart/default.png" diffuse="thumbs/cdart_mask.png">$INFO[Player.FolderPath]cdart.png</texture>
-					<bordersize>30</bordersize>
-				</control>
-				<control type="image">
-					<description>Cover image</description>
-					<width>500</width>
-					<height>500</height>
-					<aspectratio align="right">scale</aspectratio>
-					<texture diffuse="thumbs/cdcover_mask2.png" fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="28">thumbs/cd_shadow2.png</bordertexture>
-					<bordersize>28</bordersize>
-				</control>
-			</control>
-		</control>
+		</control> 
 		<!-- RSS Feed: similar artists-->
 		<control type="group">
 			<animation effect="slide" end="1870,0" time="240">WindowClose</animation>
