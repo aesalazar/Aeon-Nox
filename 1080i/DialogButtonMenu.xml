@@ -180,7 +180,52 @@
 				<onclick>ActivateWindow(favourites)</onclick>
 				<label>1036</label>
 			</control>
-			<control type="image" id="16">
+			<control type="button" id="16">
+				<description>File Manager</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>left</align>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
+				<onclick>ActivateWindow(FileManager)</onclick>
+				<font>font14</font>
+				<label>$LOCALIZE[10003]</label>
+			</control>	
+			<control type="button" id="17">
+				<description>Videos</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>left</align>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
+				<onclick>ActivateWindow(Videos,root)</onclick>
+				<font>font14</font>
+				<label>Video Files</label>
+			</control>	
+			<control type="button" id="18">
+				<description>Apps</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>left</align>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
+				<onclick>ActivateWindow(AddonBrowser)</onclick>
+				<font>font14</font>
+				<label>Add-ons</label>
+			</control>		
+			<control type="image" id="19">
 				<description>background image</description>
 				<width>510</width>
 				<height>34</height>
