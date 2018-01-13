@@ -221,7 +221,7 @@
 				<textoffsetx>45</textoffsetx>
 				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
 				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
-				<onclick>ActivateWindow(AddonBrowser)</onclick>
+				<onclick>ActivateWindow(1133)</onclick>
 				<font>font14</font>
 				<label>Add-ons</label>
 			</control>		
